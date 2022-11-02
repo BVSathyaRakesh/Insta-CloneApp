@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A410184C29122D6E00128B09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410184B29122D6E00128B09 /* LoginViewController.swift */; };
+		A410184E29122D9000128B09 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410184D29122D9000128B09 /* RegistrationViewController.swift */; };
+		A410185029122F0600128B09 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410184F29122F0600128B09 /* PostViewController.swift */; };
+		A410185229122F1D00128B09 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410185129122F1D00128B09 /* EditProfileViewController.swift */; };
+		A410185429122F6300128B09 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410185329122F6300128B09 /* SettingViewController.swift */; };
+		A410185629122F7000128B09 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410185529122F7000128B09 /* ListViewController.swift */; };
+		A410185829122F9800128B09 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410185729122F9800128B09 /* SearchViewController.swift */; };
+		A410185A291233E200128B09 /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4101859291233E200128B09 /* PostEditorViewController.swift */; };
+		A410185C2912341500128B09 /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410185B2912341500128B09 /* PublishPostViewController.swift */; };
 		A4EB30DB29116FE300002926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30DA29116FE300002926 /* AppDelegate.swift */; };
 		A4EB30DD29116FE300002926 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30DC29116FE300002926 /* SceneDelegate.swift */; };
-		A4EB30DF29116FE300002926 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30DE29116FE300002926 /* ViewController.swift */; };
 		A4EB30E229116FE300002926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4EB30E029116FE300002926 /* Main.storyboard */; };
 		A4EB30E429116FE500002926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4EB30E329116FE500002926 /* Assets.xcassets */; };
 		A4EB30E729116FE500002926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4EB30E529116FE500002926 /* LaunchScreen.storyboard */; };
 		A4EB30F229116FE600002926 /* Insta_CloneAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30F129116FE600002926 /* Insta_CloneAppTests.swift */; };
 		A4EB30FC29116FE600002926 /* Insta_CloneAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30FB29116FE600002926 /* Insta_CloneAppUITests.swift */; };
 		A4EB30FE29116FE600002926 /* Insta_CloneAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30FD29116FE600002926 /* Insta_CloneAppUITestsLaunchTests.swift */; };
+		A4EB310C291170CA00002926 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB310B291170CA00002926 /* HomeViewController.swift */; };
+		A4EB31122911732A00002926 /* ExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB31112911732A00002926 /* ExplorerViewController.swift */; };
+		A4EB31142911736A00002926 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB31132911736A00002926 /* CameraViewController.swift */; };
+		A4EB31162911738000002926 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB31152911738000002926 /* NotificationsViewController.swift */; };
+		A4EB31182911738F00002926 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB31172911738F00002926 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A410184B29122D6E00128B09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A410184D29122D9000128B09 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		A410184F29122F0600128B09 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		A410185129122F1D00128B09 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		A410185329122F6300128B09 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		A410185529122F7000128B09 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		A410185729122F9800128B09 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A4101859291233E200128B09 /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
+		A410185B2912341500128B09 /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
 		A4EB30D729116FE300002926 /* Insta-CloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta-CloneApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EB30DA29116FE300002926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4EB30DC29116FE300002926 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4EB30DE29116FE300002926 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4EB30E129116FE300002926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4EB30E329116FE500002926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4EB30E629116FE500002926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +70,11 @@
 		A4EB30F729116FE600002926 /* Insta-CloneAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Insta-CloneAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EB30FB29116FE600002926 /* Insta_CloneAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insta_CloneAppUITests.swift; sourceTree = "<group>"; };
 		A4EB30FD29116FE600002926 /* Insta_CloneAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insta_CloneAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4EB310B291170CA00002926 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A4EB31112911732A00002926 /* ExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewController.swift; sourceTree = "<group>"; };
+		A4EB31132911736A00002926 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A4EB31152911738000002926 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		A4EB31172911738F00002926 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +102,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A410184929122D4B00128B09 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				A410184A29122D5700128B09 /* OnBoarding */,
+				A410184F29122F0600128B09 /* PostViewController.swift */,
+				A410185129122F1D00128B09 /* EditProfileViewController.swift */,
+				A410185329122F6300128B09 /* SettingViewController.swift */,
+				A410185529122F7000128B09 /* ListViewController.swift */,
+				A410185729122F9800128B09 /* SearchViewController.swift */,
+				A4101859291233E200128B09 /* PostEditorViewController.swift */,
+				A410185B2912341500128B09 /* PublishPostViewController.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		A410184A29122D5700128B09 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				A410184B29122D6E00128B09 /* LoginViewController.swift */,
+				A410184D29122D9000128B09 /* RegistrationViewController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
 		A4EB30CE29116FE300002926 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +149,10 @@
 		A4EB30D929116FE300002926 /* Insta-CloneApp */ = {
 			isa = PBXGroup;
 			children = (
-				A4EB30DA29116FE300002926 /* AppDelegate.swift */,
-				A4EB30DC29116FE300002926 /* SceneDelegate.swift */,
-				A4EB30DE29116FE300002926 /* ViewController.swift */,
-				A4EB30E029116FE300002926 /* Main.storyboard */,
-				A4EB30E329116FE500002926 /* Assets.xcassets */,
-				A4EB30E529116FE500002926 /* LaunchScreen.storyboard */,
+				A4EB310F2911726D00002926 /* Models */,
+				A4EB310E2911725600002926 /* Resources */,
+				A4EB310D2911724D00002926 /* Views */,
+				A4EB310A2911701B00002926 /* Controllers */,
 				A4EB30E829116FE500002926 /* Info.plist */,
 			);
 			path = "Insta-CloneApp";
@@ -125,6 +173,61 @@
 				A4EB30FD29116FE600002926 /* Insta_CloneAppUITestsLaunchTests.swift */,
 			);
 			path = "Insta-CloneAppUITests";
+			sourceTree = "<group>";
+		};
+		A4EB310A2911701B00002926 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A410184929122D4B00128B09 /* Others */,
+				A4EB31192911739600002926 /* Coretabs */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A4EB310D2911724D00002926 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4EB3110291172DD00002926 /* StoryBoard */,
+				A4EB30E329116FE500002926 /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4EB310E2911725600002926 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A4EB30DA29116FE300002926 /* AppDelegate.swift */,
+				A4EB30DC29116FE300002926 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A4EB310F2911726D00002926 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4EB3110291172DD00002926 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				A4EB30E029116FE300002926 /* Main.storyboard */,
+				A4EB30E529116FE500002926 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		A4EB31192911739600002926 /* Coretabs */ = {
+			isa = PBXGroup;
+			children = (
+				A4EB310B291170CA00002926 /* HomeViewController.swift */,
+				A4EB31112911732A00002926 /* ExplorerViewController.swift */,
+				A4EB31132911736A00002926 /* CameraViewController.swift */,
+				A4EB31152911738000002926 /* NotificationsViewController.swift */,
+				A4EB31172911738F00002926 /* ProfileViewController.swift */,
+			);
+			path = Coretabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +361,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4EB30DF29116FE300002926 /* ViewController.swift in Sources */,
+				A410185229122F1D00128B09 /* EditProfileViewController.swift in Sources */,
 				A4EB30DB29116FE300002926 /* AppDelegate.swift in Sources */,
+				A4EB31142911736A00002926 /* CameraViewController.swift in Sources */,
 				A4EB30DD29116FE300002926 /* SceneDelegate.swift in Sources */,
+				A410184E29122D9000128B09 /* RegistrationViewController.swift in Sources */,
+				A410185029122F0600128B09 /* PostViewController.swift in Sources */,
+				A410185C2912341500128B09 /* PublishPostViewController.swift in Sources */,
+				A4EB31162911738000002926 /* NotificationsViewController.swift in Sources */,
+				A410184C29122D6E00128B09 /* LoginViewController.swift in Sources */,
+				A410185829122F9800128B09 /* SearchViewController.swift in Sources */,
+				A4EB31182911738F00002926 /* ProfileViewController.swift in Sources */,
+				A4EB310C291170CA00002926 /* HomeViewController.swift in Sources */,
+				A410185A291233E200128B09 /* PostEditorViewController.swift in Sources */,
+				A4EB31122911732A00002926 /* ExplorerViewController.swift in Sources */,
+				A410185629122F7000128B09 /* ListViewController.swift in Sources */,
+				A410185429122F6300128B09 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,13 +551,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GX9V47BXL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Insta-CloneApp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,6 +570,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iexceed..Insta-CloneApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = DevelopmentProfile;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,13 +582,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GX9V47BXL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Insta-CloneApp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,6 +601,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iexceed..Insta-CloneApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = DevelopmentProfile;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
