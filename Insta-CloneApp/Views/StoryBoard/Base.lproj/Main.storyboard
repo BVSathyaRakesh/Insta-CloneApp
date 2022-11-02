@@ -32,7 +32,7 @@
         <!--Home View Controller-->
         <scene sceneID="kWK-uj-NCy">
             <objects>
-                <viewController id="biU-Wg-8yc" customClass="HomeViewController" customModule="Insta_CloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="light" id="biU-Wg-8yc" customClass="HomeViewController" customModule="Insta_CloneApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wed-TG-8lt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

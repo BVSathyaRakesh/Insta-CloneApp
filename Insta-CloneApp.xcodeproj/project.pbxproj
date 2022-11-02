@@ -19,6 +19,9 @@
 		A410185A291233E200128B09 /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4101859291233E200128B09 /* PostEditorViewController.swift */; };
 		A410185C2912341500128B09 /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410185B2912341500128B09 /* PublishPostViewController.swift */; };
 		A410185E29124E5D00128B09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A410185D29124E5D00128B09 /* GoogleService-Info.plist */; };
+		A41018622912860900128B09 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41018612912860900128B09 /* DataBaseManager.swift */; };
+		A41018642912870A00128B09 /* Authmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41018632912870A00128B09 /* Authmanager.swift */; };
+		A41018662912879000128B09 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41018652912879000128B09 /* StorageManager.swift */; };
 		A4EB30DB29116FE300002926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30DA29116FE300002926 /* AppDelegate.swift */; };
 		A4EB30DD29116FE300002926 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30DC29116FE300002926 /* SceneDelegate.swift */; };
 		A4EB30E229116FE300002926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4EB30E029116FE300002926 /* Main.storyboard */; };
@@ -69,6 +72,9 @@
 		A4101859291233E200128B09 /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
 		A410185B2912341500128B09 /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
 		A410185D29124E5D00128B09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A41018612912860900128B09 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		A41018632912870A00128B09 /* Authmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authmanager.swift; sourceTree = "<group>"; };
+		A41018652912879000128B09 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		A4EB30D729116FE300002926 /* Insta-CloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta-CloneApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EB30DA29116FE300002926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4EB30DC29116FE300002926 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,13 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				A410184A29122D5700128B09 /* OnBoarding */,
-				A410184F29122F0600128B09 /* PostViewController.swift */,
-				A410185129122F1D00128B09 /* EditProfileViewController.swift */,
-				A410185329122F6300128B09 /* SettingViewController.swift */,
-				A410185529122F7000128B09 /* ListViewController.swift */,
-				A410185729122F9800128B09 /* SearchViewController.swift */,
-				A4101859291233E200128B09 /* PostEditorViewController.swift */,
-				A410185B2912341500128B09 /* PublishPostViewController.swift */,
+				A41018602912850D00128B09 /* General */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -154,6 +154,20 @@
 				A410184D29122D9000128B09 /* RegistrationViewController.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		A41018602912850D00128B09 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				A410184F29122F0600128B09 /* PostViewController.swift */,
+				A410185129122F1D00128B09 /* EditProfileViewController.swift */,
+				A410185329122F6300128B09 /* SettingViewController.swift */,
+				A410185529122F7000128B09 /* ListViewController.swift */,
+				A410185729122F9800128B09 /* SearchViewController.swift */,
+				A4101859291233E200128B09 /* PostEditorViewController.swift */,
+				A410185B2912341500128B09 /* PublishPostViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		A4EB30CE29116FE300002926 = {
@@ -231,6 +245,9 @@
 				A410185D29124E5D00128B09 /* GoogleService-Info.plist */,
 				A4EB30DA29116FE300002926 /* AppDelegate.swift */,
 				A4EB30DC29116FE300002926 /* SceneDelegate.swift */,
+				A41018612912860900128B09 /* DataBaseManager.swift */,
+				A41018632912870A00128B09 /* Authmanager.swift */,
+				A41018652912879000128B09 /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -516,10 +533,13 @@
 				A410185229122F1D00128B09 /* EditProfileViewController.swift in Sources */,
 				A4EB30DB29116FE300002926 /* AppDelegate.swift in Sources */,
 				A4EB31142911736A00002926 /* CameraViewController.swift in Sources */,
+				A41018642912870A00128B09 /* Authmanager.swift in Sources */,
 				A4EB30DD29116FE300002926 /* SceneDelegate.swift in Sources */,
 				A410184E29122D9000128B09 /* RegistrationViewController.swift in Sources */,
 				A410185029122F0600128B09 /* PostViewController.swift in Sources */,
+				A41018622912860900128B09 /* DataBaseManager.swift in Sources */,
 				A410185C2912341500128B09 /* PublishPostViewController.swift in Sources */,
+				A41018662912879000128B09 /* StorageManager.swift in Sources */,
 				A4EB31162911738000002926 /* NotificationsViewController.swift in Sources */,
 				A410184C29122D6E00128B09 /* LoginViewController.swift in Sources */,
 				A410185829122F9800128B09 /* SearchViewController.swift in Sources */,
