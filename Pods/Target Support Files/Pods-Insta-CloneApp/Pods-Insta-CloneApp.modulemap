@@ -1,0 +1,6 @@
+framework module Pods_Insta_CloneApp {
+  umbrella header "Pods-Insta-CloneApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
