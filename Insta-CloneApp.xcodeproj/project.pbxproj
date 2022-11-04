@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3310228244C83DD887544F37 /* Pods_Insta_CloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C341E63B9E38CD0C9AE6E33E /* Pods_Insta_CloneApp.framework */; };
 		9B5680BF828066C50FF6AF37 /* Pods_Insta_CloneAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA5485CAD0BDE6B75062C69 /* Pods_Insta_CloneAppTests.framework */; };
+		A40128CE29135E8500A08049 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40128CD29135E8500A08049 /* Extensions.swift */; };
 		A410184C29122D6E00128B09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410184B29122D6E00128B09 /* LoginViewController.swift */; };
 		A410184E29122D9000128B09 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410184D29122D9000128B09 /* RegistrationViewController.swift */; };
 		A410185029122F0600128B09 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410184F29122F0600128B09 /* PostViewController.swift */; };
@@ -62,6 +63,7 @@
 		7536E7268C53FC0B43A17DE0 /* Pods-Insta-CloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-CloneApp.release.xcconfig"; path = "Target Support Files/Pods-Insta-CloneApp/Pods-Insta-CloneApp.release.xcconfig"; sourceTree = "<group>"; };
 		75FBF39E64CBEB57284E96AB /* Pods-Insta-CloneApp-Insta-CloneAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-CloneApp-Insta-CloneAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Insta-CloneApp-Insta-CloneAppUITests/Pods-Insta-CloneApp-Insta-CloneAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B0679C292A431219B87AC1F /* Pods-Insta-CloneApp-Insta-CloneAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-CloneApp-Insta-CloneAppUITests.release.xcconfig"; path = "Target Support Files/Pods-Insta-CloneApp-Insta-CloneAppUITests/Pods-Insta-CloneApp-Insta-CloneAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A40128CD29135E8500A08049 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A410184B29122D6E00128B09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A410184D29122D9000128B09 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A410184F29122F0600128B09 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				A410185D29124E5D00128B09 /* GoogleService-Info.plist */,
+				A40128CD29135E8500A08049 /* Extensions.swift */,
 				A4EB30DA29116FE300002926 /* AppDelegate.swift */,
 				A4EB30DC29116FE300002926 /* SceneDelegate.swift */,
 				A41018612912860900128B09 /* DataBaseManager.swift */,
@@ -545,6 +548,7 @@
 				A410185829122F9800128B09 /* SearchViewController.swift in Sources */,
 				A4EB31182911738F00002926 /* ProfileViewController.swift in Sources */,
 				A4EB310C291170CA00002926 /* HomeViewController.swift in Sources */,
+				A40128CE29135E8500A08049 /* Extensions.swift in Sources */,
 				A410185A291233E200128B09 /* PostEditorViewController.swift in Sources */,
 				A4EB31122911732A00002926 /* ExplorerViewController.swift in Sources */,
 				A410185629122F7000128B09 /* ListViewController.swift in Sources */,
