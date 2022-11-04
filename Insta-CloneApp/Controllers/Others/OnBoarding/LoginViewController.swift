@@ -198,11 +198,31 @@ class LoginViewController: UIViewController {
         }
         
         //Login Functionality
+        var email: String?
+        var userName: String?
+        
+        if usernameEmail.contains("@"), usernameEmail.contains(".") {
+            email = usernameEmail
+        }else{
+            userName = usernameEmail
+        }
+        
+        AuthManager().loginUser(userName: userName, email: email, password: password) { status in
+            if status == true{
+                self.dismiss(animated: true)
+            }
+            else{
+                let alert =  UIAlertController(title: "Login error...", message: "We are unable to log you in..", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+                self.present(alert, animated: false)
+            }
+        }
         
     }
     @objc  func didTapRegisterButton(){
         let vc = RegistrationViewController()
-        present(vc, animated: true)
+        vc.title = "Create Account"
+        present(UINavigationController(rootViewController: vc), animated: true)
     }
     @objc  func didTapPrivacyButton(){
         guard let url = URL(string: "https://help.instagram.com/116024195217477") else {
