@@ -208,13 +208,15 @@ class LoginViewController: UIViewController {
         }
         
         AuthManager().loginUser(userName: userName, email: email, password: password) { status in
-            if status == true{
-                self.dismiss(animated: true)
-            }
-            else{
-                let alert =  UIAlertController(title: "Login error...", message: "We are unable to log you in..", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
-                self.present(alert, animated: false)
+            DispatchQueue.main.async {
+                if status == true{
+                    self.dismiss(animated: true)
+                }
+                else{
+                    let alert =  UIAlertController(title: "Login error...", message: "We are unable to log you in..", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+                    self.present(alert, animated: false)
+                }
             }
         }
         
