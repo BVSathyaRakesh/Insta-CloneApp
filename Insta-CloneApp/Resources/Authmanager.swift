@@ -55,7 +55,6 @@ public class AuthManager {
     }
     
     public func loginUser(userName:String?, email:String?, password:String, completionHandler: @escaping(Bool) -> Void){
-        
         if let email = email {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 guard  authResult != nil , error == nil else {
@@ -68,6 +67,19 @@ public class AuthManager {
         else if let userName = userName {
             print(userName)
         }
-        
+    }
+    
+    
+    /// /Attempt to logout Firebase user
+    public func logout(completion:(Bool)-> Void){
+        do{
+            try Auth.auth().signOut()
+            completion(true)
+        }
+        catch {
+            print(error)
+            completion(false)
+            return
+        }
     }
 }
