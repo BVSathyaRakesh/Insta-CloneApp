@@ -10,6 +10,10 @@
 		3310228244C83DD887544F37 /* Pods_Insta_CloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C341E63B9E38CD0C9AE6E33E /* Pods_Insta_CloneApp.framework */; };
 		9B5680BF828066C50FF6AF37 /* Pods_Insta_CloneAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA5485CAD0BDE6B75062C69 /* Pods_Insta_CloneAppTests.framework */; };
 		A40128CE29135E8500A08049 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40128CD29135E8500A08049 /* Extensions.swift */; };
+		A40BAF3D2919544C0015DBB1 /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BAF3C2919544B0015DBB1 /* FormTableViewCell.swift */; };
+		A40BAF41291964940015DBB1 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BAF40291964940015DBB1 /* PhotoCollectionViewCell.swift */; };
+		A40BAF43291965060015DBB1 /* ProfileInfoHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BAF42291965060015DBB1 /* ProfileInfoHeaderCollectionReusableView.swift */; };
+		A40BAF45291965540015DBB1 /* ProfileTabsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BAF44291965540015DBB1 /* ProfileTabsCollectionReusableView.swift */; };
 		A410184C29122D6E00128B09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410184B29122D6E00128B09 /* LoginViewController.swift */; };
 		A410184E29122D9000128B09 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410184D29122D9000128B09 /* RegistrationViewController.swift */; };
 		A410185029122F0600128B09 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410184F29122F0600128B09 /* PostViewController.swift */; };
@@ -23,6 +27,10 @@
 		A41018622912860900128B09 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41018612912860900128B09 /* DataBaseManager.swift */; };
 		A41018642912870A00128B09 /* Authmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41018632912870A00128B09 /* Authmanager.swift */; };
 		A41018662912879000128B09 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41018652912879000128B09 /* StorageManager.swift */; };
+		A44EC87B2917D5C2008D7341 /* IGFeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44EC87A2917D5C2008D7341 /* IGFeedPostTableViewCell.swift */; };
+		A44EC87E2917D8DD008D7341 /* IGFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44EC87D2917D8DC008D7341 /* IGFeedPostHeaderTableViewCell.swift */; };
+		A44EC8802917D902008D7341 /* IGFeedPostActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44EC87F2917D902008D7341 /* IGFeedPostActionTableViewCell.swift */; };
+		A44EC8822917D982008D7341 /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44EC8812917D982008D7341 /* IGFeedPostGeneralTableViewCell.swift */; };
 		A4EB30DB29116FE300002926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30DA29116FE300002926 /* AppDelegate.swift */; };
 		A4EB30DD29116FE300002926 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30DC29116FE300002926 /* SceneDelegate.swift */; };
 		A4EB30E229116FE300002926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4EB30E029116FE300002926 /* Main.storyboard */; };
@@ -64,6 +72,10 @@
 		75FBF39E64CBEB57284E96AB /* Pods-Insta-CloneApp-Insta-CloneAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-CloneApp-Insta-CloneAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Insta-CloneApp-Insta-CloneAppUITests/Pods-Insta-CloneApp-Insta-CloneAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B0679C292A431219B87AC1F /* Pods-Insta-CloneApp-Insta-CloneAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Insta-CloneApp-Insta-CloneAppUITests.release.xcconfig"; path = "Target Support Files/Pods-Insta-CloneApp-Insta-CloneAppUITests/Pods-Insta-CloneApp-Insta-CloneAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A40128CD29135E8500A08049 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A40BAF3C2919544B0015DBB1 /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
+		A40BAF40291964940015DBB1 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		A40BAF42291965060015DBB1 /* ProfileInfoHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		A40BAF44291965540015DBB1 /* ProfileTabsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabsCollectionReusableView.swift; sourceTree = "<group>"; };
 		A410184B29122D6E00128B09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A410184D29122D9000128B09 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A410184F29122F0600128B09 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +89,10 @@
 		A41018612912860900128B09 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		A41018632912870A00128B09 /* Authmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authmanager.swift; sourceTree = "<group>"; };
 		A41018652912879000128B09 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		A44EC87A2917D5C2008D7341 /* IGFeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostTableViewCell.swift; sourceTree = "<group>"; };
+		A44EC87D2917D8DC008D7341 /* IGFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		A44EC87F2917D902008D7341 /* IGFeedPostActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionTableViewCell.swift; sourceTree = "<group>"; };
+		A44EC8812917D982008D7341 /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
 		A4EB30D729116FE300002926 /* Insta-CloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta-CloneApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EB30DA29116FE300002926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4EB30DC29116FE300002926 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +188,29 @@
 			path = General;
 			sourceTree = "<group>";
 		};
+		A44EC8792917D521008D7341 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A44EC87C2917D886008D7341 /* HomeFeed */,
+				A40BAF3C2919544B0015DBB1 /* FormTableViewCell.swift */,
+				A40BAF40291964940015DBB1 /* PhotoCollectionViewCell.swift */,
+				A40BAF42291965060015DBB1 /* ProfileInfoHeaderCollectionReusableView.swift */,
+				A40BAF44291965540015DBB1 /* ProfileTabsCollectionReusableView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A44EC87C2917D886008D7341 /* HomeFeed */ = {
+			isa = PBXGroup;
+			children = (
+				A44EC87A2917D5C2008D7341 /* IGFeedPostTableViewCell.swift */,
+				A44EC87D2917D8DC008D7341 /* IGFeedPostHeaderTableViewCell.swift */,
+				A44EC87F2917D902008D7341 /* IGFeedPostActionTableViewCell.swift */,
+				A44EC8812917D982008D7341 /* IGFeedPostGeneralTableViewCell.swift */,
+			);
+			path = HomeFeed;
+			sourceTree = "<group>";
+		};
 		A4EB30CE29116FE300002926 = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +274,7 @@
 		A4EB310D2911724D00002926 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A44EC8792917D521008D7341 /* Cells */,
 				A4EB3110291172DD00002926 /* StoryBoard */,
 				A4EB30E329116FE500002926 /* Assets.xcassets */,
 			);
@@ -533,13 +573,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44EC87E2917D8DD008D7341 /* IGFeedPostHeaderTableViewCell.swift in Sources */,
+				A40BAF41291964940015DBB1 /* PhotoCollectionViewCell.swift in Sources */,
+				A40BAF43291965060015DBB1 /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
 				A410185229122F1D00128B09 /* EditProfileViewController.swift in Sources */,
+				A44EC8822917D982008D7341 /* IGFeedPostGeneralTableViewCell.swift in Sources */,
 				A4EB30DB29116FE300002926 /* AppDelegate.swift in Sources */,
 				A4EB31142911736A00002926 /* CameraViewController.swift in Sources */,
 				A41018642912870A00128B09 /* Authmanager.swift in Sources */,
 				A4EB30DD29116FE300002926 /* SceneDelegate.swift in Sources */,
 				A410184E29122D9000128B09 /* RegistrationViewController.swift in Sources */,
 				A410185029122F0600128B09 /* PostViewController.swift in Sources */,
+				A40BAF45291965540015DBB1 /* ProfileTabsCollectionReusableView.swift in Sources */,
+				A44EC8802917D902008D7341 /* IGFeedPostActionTableViewCell.swift in Sources */,
 				A41018622912860900128B09 /* DataBaseManager.swift in Sources */,
 				A410185C2912341500128B09 /* PublishPostViewController.swift in Sources */,
 				A41018662912879000128B09 /* StorageManager.swift in Sources */,
@@ -548,10 +594,12 @@
 				A410185829122F9800128B09 /* SearchViewController.swift in Sources */,
 				A4EB31182911738F00002926 /* ProfileViewController.swift in Sources */,
 				A4EB310C291170CA00002926 /* HomeViewController.swift in Sources */,
+				A44EC87B2917D5C2008D7341 /* IGFeedPostTableViewCell.swift in Sources */,
 				A40128CE29135E8500A08049 /* Extensions.swift in Sources */,
 				A410185A291233E200128B09 /* PostEditorViewController.swift in Sources */,
 				A4EB31122911732A00002926 /* ExplorerViewController.swift in Sources */,
 				A410185629122F7000128B09 /* ListViewController.swift in Sources */,
+				A40BAF3D2919544C0015DBB1 /* FormTableViewCell.swift in Sources */,
 				A410185429122F6300128B09 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
