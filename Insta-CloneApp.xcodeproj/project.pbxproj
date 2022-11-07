@@ -31,6 +31,7 @@
 		A44EC87E2917D8DD008D7341 /* IGFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44EC87D2917D8DC008D7341 /* IGFeedPostHeaderTableViewCell.swift */; };
 		A44EC8802917D902008D7341 /* IGFeedPostActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44EC87F2917D902008D7341 /* IGFeedPostActionTableViewCell.swift */; };
 		A44EC8822917D982008D7341 /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44EC8812917D982008D7341 /* IGFeedPostGeneralTableViewCell.swift */; };
+		A4AC061329197D3F00D033D4 /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC061229197D3F00D033D4 /* models.swift */; };
 		A4EB30DB29116FE300002926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30DA29116FE300002926 /* AppDelegate.swift */; };
 		A4EB30DD29116FE300002926 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB30DC29116FE300002926 /* SceneDelegate.swift */; };
 		A4EB30E229116FE300002926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4EB30E029116FE300002926 /* Main.storyboard */; };
@@ -93,6 +94,7 @@
 		A44EC87D2917D8DC008D7341 /* IGFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		A44EC87F2917D902008D7341 /* IGFeedPostActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionTableViewCell.swift; sourceTree = "<group>"; };
 		A44EC8812917D982008D7341 /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
+		A4AC061229197D3F00D033D4 /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 		A4EB30D729116FE300002926 /* Insta-CloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Insta-CloneApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EB30DA29116FE300002926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4EB30DC29116FE300002926 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		A4EB310F2911726D00002926 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A4AC061229197D3F00D033D4 /* models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 			files = (
 				A44EC87E2917D8DD008D7341 /* IGFeedPostHeaderTableViewCell.swift in Sources */,
 				A40BAF41291964940015DBB1 /* PhotoCollectionViewCell.swift in Sources */,
+				A4AC061329197D3F00D033D4 /* models.swift in Sources */,
 				A40BAF43291965060015DBB1 /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
 				A410185229122F1D00128B09 /* EditProfileViewController.swift in Sources */,
 				A44EC8822917D982008D7341 /* IGFeedPostGeneralTableViewCell.swift in Sources */,

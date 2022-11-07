@@ -115,7 +115,8 @@ final class EditProfileViewController: UIViewController,UITableViewDataSource {
     }
     
     @objc func didTapCancel(){
-       
+       // canceled the screen
+        dismiss(animated: true)
     }
     
     func didTapChangeProfilePicture() {

@@ -30,31 +30,4 @@ public class StorageManager {
 
 }
 
-public enum userPostType {
-    case photo, video
-}
 
-/// Represents a user post
-public struct PhotoPost {
-    let identifier: String
-    let postType: userPostType
-    let thumbnailImage : URL  //either video url or full resolution photo
-    let captions: String?
-    let likeCount: [PostLike]
-    let comments: [Postcomment]
-    let Createddate: Date
-}
-struct PostLike {
-    let userName: String
-    let postIdentifier : String
-    
-}
-
-struct 
-
-struct Postcomment {
-    let userName : String
-    let text: String
-    let createdDate: Date
-    let likes:
-}

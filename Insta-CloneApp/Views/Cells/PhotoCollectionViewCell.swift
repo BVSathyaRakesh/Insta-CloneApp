@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PhotoCollectionViewCell: UICollectionViewCell {
     
@@ -30,6 +31,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        contentView.backgroundColor = .secondarySystemBackground
         contentView.addSubview(photoImageView)
         contentView.clipsToBounds = true
         accessibilityLabel = "User post image"
@@ -40,8 +42,12 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(with model: String){
-        
+    public func configure(with model: PhotoPost){
+        let url = model.thumbnailImage
+//        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
+//            self.photoImageView.image = UIImage(data: data!)
+//        }
+        photoImageView.sd_setImage(with: url)
     }
     
     public func configure(with imageName: String){
