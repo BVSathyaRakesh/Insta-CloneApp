@@ -24,6 +24,10 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+//        print(UIDevice.current.model)
+//        print(UIDevice.current.systemVersion)
+//        print(UIDevice.current.localizedModel)
+       // print(UIDevice.current.modelName)
     }
     
     override func viewDidLayoutSubviews() {
@@ -62,5 +66,18 @@ extension HomeViewController : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         //data[indexPath.section][indexPath.row].handler()
+    }
+}
+
+extension UIDevice {
+    var modelName: String {
+        var systemInfo = utsname()
+        uname(&systemInfo)
+        let machineMirror = Mirror(reflecting: systemInfo.machine)
+        let identifier = machineMirror.children.reduce("") { identifier, element in
+            guard let value = element.value as? Int8, value != 0 else { return identifier }
+            return identifier + String(UnicodeScalar(UInt8(value)))
+        }
+        return identifier
     }
 }

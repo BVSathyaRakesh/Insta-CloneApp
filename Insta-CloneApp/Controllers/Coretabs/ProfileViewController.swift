@@ -11,6 +11,8 @@ import UIKit
 final class ProfileViewController: UIViewController {
     
     private var collectionsView: UICollectionView?
+    
+    private var userPosts = [PhotoPost]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,14 +80,26 @@ extension ProfileViewController : UICollectionViewDataSource,UICollectionViewDel
         if section == 0 {
             return 0
         }
+        //return Userposts count
         return 30
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       // let model = userPosts[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier,for: indexPath) as! PhotoCollectionViewCell
+       // cell.configure(with: model)
         cell.configure(with: "mountain")
         cell.backgroundColor = .systemBlue
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //get the model and open post controller
+        let vc = PostViewController(model: nil)
+        vc.title = "Post"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -101,6 +115,8 @@ extension ProfileViewController : UICollectionViewDataSource,UICollectionViewDel
         }
         let profileHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ProfileInfoHeaderCollectionReusableView.identifier, for: indexPath) as! ProfileInfoHeaderCollectionReusableView
         
+        profileHeader.delegate = self
+        
         return profileHeader
     }
     
@@ -112,6 +128,34 @@ extension ProfileViewController : UICollectionViewDataSource,UICollectionViewDel
         //size of sections tabs
         return CGSize(width: collectionView.width, height: 65)
     }
-    
         
+}
+
+//Mark: ProfileInfoHeaderCollectionReusableViewDelegate
+extension ProfileViewController: ProfileInfoHeaderCollectionReusableViewDelegate {
+    func profileHeaderDidTapPostsButton(_ header: ProfileInfoHeaderCollectionReusableView) {
+        //scroll to the posts
+        collectionsView?.scrollToItem(at: IndexPath(row: 0, section: 1), at: .top, animated: true)
+    }
+    
+    func profileHeaderDidFollowersButton(_ header: ProfileInfoHeaderCollectionReusableView) {
+        let vc = ListViewController()
+        vc.title = "Followers"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func profileHeaderDidFollowingButton(_ header: ProfileInfoHeaderCollectionReusableView) {
+        let vc = ListViewController()
+        vc.title = "Following"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func profileHeaderDidEditProfileButton(_ header: ProfileInfoHeaderCollectionReusableView) {
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        present(UINavigationController(rootViewController: vc), animated: true)
+    }
+    
 }
