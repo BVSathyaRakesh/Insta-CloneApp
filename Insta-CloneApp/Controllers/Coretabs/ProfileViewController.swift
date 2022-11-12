@@ -29,7 +29,7 @@ final class ProfileViewController: UIViewController {
         let size = (view.width-4)/3
         layout.itemSize = CGSize(width: size, height: size)
         collectionsView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionsView?.backgroundColor = .red
+        collectionsView?.backgroundColor = .systemBackground
         collectionsView?.delegate = self
         collectionsView?.dataSource = self
         
@@ -110,13 +110,11 @@ extension ProfileViewController : UICollectionViewDataSource,UICollectionViewDel
         if indexPath.section == 1{
             //tabs header
             let tabseHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ProfileTabsCollectionReusableView.identifier, for: indexPath) as! ProfileTabsCollectionReusableView
-            
+            tabseHeader.delegate = self
             return tabseHeader
         }
         let profileHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ProfileInfoHeaderCollectionReusableView.identifier, for: indexPath) as! ProfileInfoHeaderCollectionReusableView
-        
         profileHeader.delegate = self
-        
         return profileHeader
     }
     
@@ -126,7 +124,7 @@ extension ProfileViewController : UICollectionViewDataSource,UICollectionViewDel
         }
         
         //size of sections tabs
-        return CGSize(width: collectionView.width, height: 65)
+        return CGSize(width: collectionView.width, height: 50)
     }
         
 }
@@ -139,14 +137,26 @@ extension ProfileViewController: ProfileInfoHeaderCollectionReusableViewDelegate
     }
     
     func profileHeaderDidFollowersButton(_ header: ProfileInfoHeaderCollectionReusableView) {
-        let vc = ListViewController()
+        
+        var mockData = [UserRelationShip]()
+        
+        for x in 0..<10 {
+            mockData.append(UserRelationShip(userName: "joe", name: "Joe Smith", type: x % 2 == 0 ? .following : .not_following))
+        }
+        
+        let vc = ListViewController(data: mockData)
         vc.title = "Followers"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }
     
     func profileHeaderDidFollowingButton(_ header: ProfileInfoHeaderCollectionReusableView) {
-        let vc = ListViewController()
+        var mockData = [UserRelationShip]()
+        for x in 0..<10 {
+            mockData.append(UserRelationShip(userName: "joe", name: "Joe Smith", type: x % 2 == 0 ? .following : .not_following))
+        }
+        
+        let vc = ListViewController(data: mockData)
         vc.title = "Following"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
@@ -157,5 +167,17 @@ extension ProfileViewController: ProfileInfoHeaderCollectionReusableViewDelegate
         vc.title = "Edit Profile"
         present(UINavigationController(rootViewController: vc), animated: true)
     }
+}
+
+//Mark: ProfileTabsCollectionReusableViewDelegate
+extension ProfileViewController : ProfileTabsCollectionReusableViewDelegate {
+    func didTapGridButtonTab() {
+        
+    }
+    
+    func didTapTaggedButtonTab() {
+        
+    }
+    
     
 }

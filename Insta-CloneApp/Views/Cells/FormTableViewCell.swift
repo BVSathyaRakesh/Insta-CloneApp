@@ -53,6 +53,7 @@ class FormTableViewCell: UITableViewCell,UITextFieldDelegate {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         formLabel.text = nil
         field.placeholder = nil
         field.text = nil
