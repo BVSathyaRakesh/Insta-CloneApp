@@ -7,7 +7,18 @@
 
 import UIKit
 
-class NotificationsViewController: UIViewController {
+enum UserNotificationType {
+    case like(post: PhotoPost)
+    case follow(state: FollowState)
+}
+
+struct UserNotification {
+    let type: UserNotificationType
+    let text: String
+    let user: User
+}
+
+final class NotificationsViewController: UIViewController {
     
     private let tableView : UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -26,6 +37,8 @@ class NotificationsViewController: UIViewController {
     
     private lazy var notificationsView = NoNotificationsView()
     
+    private var models =  [UserNotification]()
+    
     //Mark: LifeCycle
 
     override func viewDidLoad() {
@@ -37,6 +50,8 @@ class NotificationsViewController: UIViewController {
         view.addSubview(tableView)
        // view.addSubview(spinner)
         spinner.startAnimating()
+        
+        fetchNotifications()
         // Do any additional setup after loading the view.
     }
     
@@ -48,28 +63,44 @@ class NotificationsViewController: UIViewController {
     }
     
     private func addNoNotificationsView() {
-        tableView.isHidden = true
+        tableView.isHidden = false
         view.addSubview(tableView)
         notificationsView.frame = CGRect(x: 0, y: 0, width: view.width/2, height: view.width/4)
         notificationsView.center = view.center
+    }
+    
+    private func fetchNotifications() {
+        for x in 0...100 {
+            let post = PhotoPost(identifier: "", postType: .photo, thumbnailImage: URL(string: "https://www.google.com/")!, captions: nil, likeCount: [], comments: [], Createddate: Date(), taggedUser: [])
+            let model = UserNotification(type: x % 2 == 0 ? .like(post:post) : .follow(state: .not_following), text: "hello World", user: User(userName: "joe", name: (first: "", last: ""), birthDate: Date(), gender: .male, count: UserCount(followers: 1, following: 1, posts: 1), joinedDate: Date(), profilePhoto: URL(string: "https://www.google.com/")!))
+            models.append(model)
+        }
     }
 
 }
 
 extension NotificationsViewController : UITableViewDataSource,UITableViewDelegate{
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+         return models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NotificationsLikeEventTableViewCell.identifier,for: indexPath) as! NotificationsLikeEventTableViewCell
-        //cell.textLabel?.text = data[indexPath.section][indexPath.row].title
-        return cell
+        let model = models[indexPath.row]
+        switch model.type {
+        case .like(_):
+            let cell = tableView.dequeueReusableCell(withIdentifier: NotificationsLikeEventTableViewCell.identifier,for: indexPath) as! NotificationsLikeEventTableViewCell
+            cell.configure(with: model)
+            cell.delegate = self
+            return cell
+        case .follow:
+            let cell = tableView.dequeueReusableCell(withIdentifier: NotificationFollowEventTableViewCell.identifier,for: indexPath) as! NotificationFollowEventTableViewCell
+           // cell.configure(with: model)
+            cell.delegate = self
+            return cell
+        }
+               
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -77,4 +108,22 @@ extension NotificationsViewController : UITableViewDataSource,UITableViewDelegat
         //data[indexPath.section][indexPath.row].handler()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 52
+    }
+    
+}
+
+extension NotificationsViewController : NotificationsLikeEventTableViewCellDelegate {
+    func didTapRelatedPostButton(model: UserNotification) {
+        print("Tapped Post")
+        //open the post
+    }
+}
+
+extension NotificationsViewController : NotificationFollowEventTableViewCellDelegate {
+    func didTapFollowUnFollowButton(model: UserNotification) {
+        print("Tapped Button")
+        //perform database update
+    }
 }
