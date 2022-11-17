@@ -1,5 +1,5 @@
 //
-//  IGFeedPostGeneralTableViewCell.swift
+//  IGFeedPostActionTableViewCell.swift
 //  Insta-CloneApp
 //
 //  Created by Rakesh BVS. Kumar on 2022/11/6.
@@ -7,12 +7,13 @@
 
 import UIKit
 
-class IGFeedPostGeneralTableViewCell: UITableViewCell {
+class IGFeedPostActionTableViewCell: UITableViewCell {
 
-    static let identifier = "IGFeedPostGeneralTableViewCell"
+    static let identifier = "IGFeedPostActionTableViewCell"
 
      override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
          super.init(style: style, reuseIdentifier: reuseIdentifier)
+         contentView.backgroundColor = .systemGreen
      }
      
      required init?(coder: NSCoder) {
@@ -22,5 +23,6 @@ class IGFeedPostGeneralTableViewCell: UITableViewCell {
      public func configure() {
          // configure the cell
      }
+
 
 }

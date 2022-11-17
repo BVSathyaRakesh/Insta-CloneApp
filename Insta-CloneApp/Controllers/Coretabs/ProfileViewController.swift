@@ -12,7 +12,7 @@ final class ProfileViewController: UIViewController {
     
     private var collectionsView: UICollectionView?
     
-    private var userPosts = [PhotoPost]()
+    private var userPosts = [UserPost]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,11 +8,24 @@
 import FirebaseAuth
 import UIKit
 
+struct HomeFeedHeaderViewModel {
+    let header: PostRenderViewModel
+    let post : PostRenderViewModel
+    let actions: PostRenderViewModel
+    let comments: PostRenderViewModel
+}
+
 class HomeViewController: UIViewController {
+    
+    private var feedRenderViewModels = [HomeFeedHeaderViewModel]()
     
     private let tableView : UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
+        ///Register Cells
+        tableView.register(IGFeedPostGeneralTableViewCell.self, forCellReuseIdentifier: IGFeedPostGeneralTableViewCell.identifier)
         tableView.register(IGFeedPostTableViewCell.self, forCellReuseIdentifier: IGFeedPostTableViewCell.identifier)
+        tableView.register(IGFeedPostActionTableViewCell.self, forCellReuseIdentifier: IGFeedPostActionTableViewCell.identifier)
+        tableView.register(IGFeedPostHeaderTableViewCell.self, forCellReuseIdentifier: IGFeedPostHeaderTableViewCell.identifier)
        return tableView
     }()
 
@@ -23,11 +36,7 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemBackground
         tableView.dataSource = self
         tableView.delegate = self
-        
-//        print(UIDevice.current.model)
-//        print(UIDevice.current.systemVersion)
-//        print(UIDevice.current.localizedModel)
-       // print(UIDevice.current.modelName)
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -44,28 +53,146 @@ class HomeViewController: UIViewController {
             present(vc, animated: false)
         }
     }
-
 }
 
 extension HomeViewController : UITableViewDataSource,UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return feedRenderViewModels.count * 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        let x = section
+        let model: HomeFeedHeaderViewModel
+        
+        if x == 0 {
+             model = feedRenderViewModels[0]
+        }else{
+            let position = x % 4 == 0 ? x/4 : ((x-(x-4))/4)
+            model = feedRenderViewModels[position]
+        }
+        
+        let subSection = x % 4
+        
+        if subSection == 0 {
+            //header
+            return 1
+        }
+        
+        if subSection == 1 {
+            //post
+            return 1
+        }
+        
+        if subSection == 2 {
+            //actions
+            return 1
+        }
+        
+        if subSection == 3 {
+            //comments
+            let commentsModel = model.comments
+            switch commentsModel.renderType {
+               case .comments(let comments): return comments.count > 2 ? 2 : comments.count
+            @unknown default : fatalError("Invalid case")
+            }
+        }
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostTableViewCell.identifier,for: indexPath) as! IGFeedPostTableViewCell
-        //cell.textLabel?.text = data[indexPath.section][indexPath.row].title
-        return cell
+        
+        let x = indexPath.section
+        let model: HomeFeedHeaderViewModel
+        
+        if x == 0 {
+             model = feedRenderViewModels[0]
+        }else{
+            let position = x % 4 == 0 ? x/4 : ((x-(x-4))/4)
+            model = feedRenderViewModels[position]
+        }
+        
+        let subSection = x % 4
+        
+        if subSection == 0 {
+            //header
+            let headerModel = model.header
+            switch headerModel.renderType {
+            case .header(let header):
+                let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostHeaderTableViewCell.identifier, for: indexPath) as! IGFeedPostHeaderTableViewCell
+                
+                return cell
+             @unknown default : fatalError()
+            }
+        }
+        
+        if subSection == 1 {
+            //post
+            let postModel = model.post
+            switch postModel.renderType {
+            case .primaryContent(let post):
+                let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostGeneralTableViewCell.identifier, for: indexPath) as! IGFeedPostGeneralTableViewCell
+                
+                return cell
+             @unknown default : fatalError()
+            }
+            
+        }
+        
+        if subSection == 2 {
+            //actions
+            let actionModel = model.actions
+            switch actionModel.renderType {
+            case .actions(let action):
+                let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostActionTableViewCell.identifier, for: indexPath) as! IGFeedPostActionTableViewCell
+                
+                return cell
+             @unknown default : fatalError()
+            }
+        }
+        
+        if subSection == 3 {
+            //comments
+            let commentsModel = model.comments
+            switch commentsModel.renderType {
+            case .comments(let comments):
+                let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostGeneralTableViewCell.identifier, for: indexPath) as! IGFeedPostGeneralTableViewCell
+                
+                return cell
+             @unknown default : fatalError()
+            }
+        }
+        
+        
+       return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //data[indexPath.section][indexPath.row].handler()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let subsection = indexPath.section % 4
+        
+        if subsection == 0 {
+            return 70
+        }
+        else if subsection == 1 {
+            return tableView.width
+        }
+        
+        else if subsection == 2 {
+            return 60
+        }
+        
+        else if subsection == 3 {
+            return 50
+        }
+        
+        return 0
     }
 }
 

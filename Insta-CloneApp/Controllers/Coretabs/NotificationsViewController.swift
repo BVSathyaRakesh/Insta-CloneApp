@@ -8,7 +8,7 @@
 import UIKit
 
 enum UserNotificationType {
-    case like(post: PhotoPost)
+    case like(post: UserPost)
     case follow(state: FollowState)
 }
 
@@ -71,8 +71,11 @@ final class NotificationsViewController: UIViewController {
     
     private func fetchNotifications() {
         for x in 0...100 {
-            let post = PhotoPost(identifier: "", postType: .photo, thumbnailImage: URL(string: "https://www.google.com/")!, captions: nil, likeCount: [], comments: [], Createddate: Date(), taggedUser: [])
-            let model = UserNotification(type: x % 2 == 0 ? .like(post:post) : .follow(state: .not_following), text: "hello World", user: User(userName: "joe", name: (first: "", last: ""), birthDate: Date(), gender: .male, count: UserCount(followers: 1, following: 1, posts: 1), joinedDate: Date(), profilePhoto: URL(string: "https://www.google.com/")!))
+            let user = User(userName: "joe", name: (first: "", last: ""), birthDate: Date(), gender: .male, count: UserCount(followers: 1, following: 1, posts: 1), joinedDate: Date(), profilePhoto: URL(string: "https://www.google.com/")!)
+            let post = UserPost(identifier: "", postType: .photo, thumbnailImage: URL(string: "https://www.google.com/")!, captions: nil, likeCount: [], comments: [], Createddate: Date(), taggedUser: [],owner: user)
+            let model = UserNotification(type: x % 2 == 0 ? .like(post:post) : .follow(state: .not_following),
+                                         text: "hello World",
+                                         user:user)
             models.append(model)
         }
     }
@@ -116,8 +119,21 @@ extension NotificationsViewController : UITableViewDataSource,UITableViewDelegat
 
 extension NotificationsViewController : NotificationsLikeEventTableViewCellDelegate {
     func didTapRelatedPostButton(model: UserNotification) {
-        print("Tapped Post")
         //open the post
+        
+        switch(model.type){
+        case .like(let post) :
+            let vc = PostViewController(model: post)
+            vc.title = post.postType.rawValue
+            vc.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case .follow(_):
+            fatalError("Dev Issue: should never get called")
+        }
+        
+       
+        
     }
 }
 

@@ -42,7 +42,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(with model: PhotoPost){
+    public func configure(with model: UserPost){
         let url = model.thumbnailImage
 //        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
 //            self.photoImageView.image = UIImage(data: data!)
