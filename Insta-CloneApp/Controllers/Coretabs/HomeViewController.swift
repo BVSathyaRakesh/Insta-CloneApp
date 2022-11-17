@@ -32,11 +32,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         view.backgroundColor = .systemBackground
         tableView.dataSource = self
         tableView.delegate = self
-
+        view.addSubview(tableView)
+        createMockModels()
     }
     
     override func viewDidLayoutSubviews() {
@@ -51,6 +51,36 @@ class HomeViewController: UIViewController {
             let vc = LoginViewController()
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: false)
+        }
+    }
+    
+    private func createMockModels(){
+        
+        let user = User(userName: "joe",
+                        name: (first: "", last: ""),
+                        birthDate: Date(),
+                        gender: .male,
+                        count: UserCount(followers: 1, following: 1, posts: 1),
+                        joinedDate: Date(),
+                        profilePhoto: URL(string: "https://www.google.com/")!)
+        let post = UserPost(identifier: "",
+                            postType: .photo,
+                            thumbnailImage: URL(string: "https://www.google.com/")!,
+                            captions: nil,
+                            likeCount: [],
+                            comments: [],
+                            Createddate: Date(),
+                            taggedUser: [],owner: user)
+        
+        var comments = [Postcomment]()
+        
+        for x in 0..<2 {
+            comments.append(Postcomment(identifier: "\(x)", userName: "@jenny", text: "This is best post I've seen", createdDate: Date(), likes: []))
+        }
+        
+        for x in 0..<5 {
+            let viewModel = HomeFeedHeaderViewModel(header: PostRenderViewModel(renderType: .header(provider: user)), post: PostRenderViewModel(renderType: .primaryContent(provider: post)), actions: PostRenderViewModel(renderType: .actions(provider: "")), comments: PostRenderViewModel(renderType: .comments(comments: comments)))
+            feedRenderViewModels.append(viewModel)
         }
     }
 }
@@ -124,7 +154,7 @@ extension HomeViewController : UITableViewDataSource,UITableViewDelegate {
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostHeaderTableViewCell.identifier, for: indexPath) as! IGFeedPostHeaderTableViewCell
                 
                 return cell
-             @unknown default : fatalError()
+            case .primaryContent,.actions,.comments: return UITableViewCell()
             }
         }
         
@@ -136,7 +166,7 @@ extension HomeViewController : UITableViewDataSource,UITableViewDelegate {
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostGeneralTableViewCell.identifier, for: indexPath) as! IGFeedPostGeneralTableViewCell
                 
                 return cell
-             @unknown default : fatalError()
+            case .header,.actions,.comments: return UITableViewCell()
             }
             
         }
@@ -149,7 +179,7 @@ extension HomeViewController : UITableViewDataSource,UITableViewDelegate {
                 let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostActionTableViewCell.identifier, for: indexPath) as! IGFeedPostActionTableViewCell
                 
                 return cell
-             @unknown default : fatalError()
+            case .header,.primaryContent,.comments: return UITableViewCell()
             }
         }
         
@@ -158,15 +188,19 @@ extension HomeViewController : UITableViewDataSource,UITableViewDelegate {
             let commentsModel = model.comments
             switch commentsModel.renderType {
             case .comments(let comments):
-                let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostGeneralTableViewCell.identifier, for: indexPath) as! IGFeedPostGeneralTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostTableViewCell.identifier, for: indexPath) as! IGFeedPostTableViewCell
                 
                 return cell
-             @unknown default : fatalError()
+              case .header,.primaryContent,.actions: return UITableViewCell()
             }
         }
         
         
        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -193,6 +227,13 @@ extension HomeViewController : UITableViewDataSource,UITableViewDelegate {
         }
         
         return 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        
+        let subsection = section % 4
+        
+        return subsection == 3 ? 70 : 0
     }
 }
 
